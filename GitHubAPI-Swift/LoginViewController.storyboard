@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BRb-wl-gYI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Mdg-s5-uAp">
+            <objects>
+                <viewController id="oES-9w-DSI" customClass="LoginViewController" customModule="GitHubAPI_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIW-Ap-cbm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GitHub Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibp-al-rvv">
+                                <rect key="frame" x="20" y="340" width="301" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="gRA-nU-y1B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY1-39-rQw">
+                                <rect key="frame" x="107" y="268" width="200" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="k07-Hu-2vW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQ0-Hg-eYh">
+                                <rect key="frame" x="329" y="340" width="65" height="34"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Y1D-69-hhJ"/>
+                                    <constraint firstAttribute="width" constant="65" id="rT0-oc-K1r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="titleShadowColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="oES-9w-DSI" eventType="touchUpInside" id="tfh-aw-zeM"/>
+                                    <segue destination="2b4-9c-q8P" kind="show" identifier="LoginToRepositories" id="DaE-Ja-Lsp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nY1-39-rQw" firstAttribute="top" secondItem="sPM-Oy-7Dc" secondAttribute="top" constant="180" id="0hk-KT-EAM"/>
+                            <constraint firstItem="dQ0-Hg-eYh" firstAttribute="leading" secondItem="Ibp-al-rvv" secondAttribute="trailing" constant="8" id="1Pp-dp-9OG"/>
+                            <constraint firstItem="dQ0-Hg-eYh" firstAttribute="top" secondItem="nY1-39-rQw" secondAttribute="bottom" constant="30" id="2B4-9n-qVQ"/>
+                            <constraint firstItem="nY1-39-rQw" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="3Po-Ig-n4x"/>
+                            <constraint firstItem="Ibp-al-rvv" firstAttribute="top" secondItem="nY1-39-rQw" secondAttribute="bottom" constant="30" id="41D-aI-ThH"/>
+                            <constraint firstItem="sPM-Oy-7Dc" firstAttribute="trailing" secondItem="dQ0-Hg-eYh" secondAttribute="trailing" constant="20" id="9Xo-M6-Iw5"/>
+                            <constraint firstItem="Ibp-al-rvv" firstAttribute="leading" secondItem="sPM-Oy-7Dc" secondAttribute="leading" constant="20" id="Gn9-oq-lyf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sPM-Oy-7Dc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Shd-25-xbi"/>
+                    <connections>
+                        <outlet property="usernameTextfield" destination="Ibp-al-rvv" id="C5A-m4-4lr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPd-92-Ykh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="89.732142857142847"/>
+        </scene>
+        <!--CommitsViewController-->
+        <scene sceneID="joe-Da-DK3">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RepositoriesViewController" storyboardName="CommitsViewController" id="2b4-9c-q8P" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LxI-rs-kUl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQO-oU-spo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692.753623188406" y="30.803571428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5TX-K4-3Oq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BRb-wl-gYI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HPw-sE-5I9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oES-9w-DSI" kind="relationship" relationship="rootViewController" id="DH7-NN-MS4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I34-m9-d5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>
