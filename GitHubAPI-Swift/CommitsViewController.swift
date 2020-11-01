@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GithubAPI
 
 class CommitsViewController: UITableViewController {
 
@@ -18,17 +19,7 @@ class CommitsViewController: UITableViewController {
         super.viewDidLoad()
 
         numberOfCommitsLabel.text = "\(demoData.count)"
-        
-        guard let url = URL(string: "https://www.api.github.com/repos/polianshpatina/GitHubAPI-Swift/commits") else { return }
-
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-
-          guard let data = data, error == nil else { return }
-
-          print(NSString(data: data, encoding: String.Encoding.utf8.rawValue))
-        }
-
-        task.resume()
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

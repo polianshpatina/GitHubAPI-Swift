@@ -1,0 +1,6 @@
+module Pods_GitHubAPI_Swift {
+  umbrella header "Pods-GitHubAPI-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
