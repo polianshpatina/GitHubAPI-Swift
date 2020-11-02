@@ -14,43 +14,33 @@ class RepositoriesViewController: UITableViewController {
     @IBOutlet weak var numberOfRepositoriesLabel: UILabel!
     
     var username = String()
-    let repositryList: [RepositoryResponse] = []
+    var repositryList: [RepositoryResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadRepos()
-        numberOfRepositoriesLabel.text = String(repositryList.count)
     }
     
     private func loadRepos() {
         
-        let jsonUrlString = "https://api.github.com/users/polianshpatina/repos"
+        let jsonUrlString = "https://api.github.com/users/\(username)/repos"
         
         guard let url = URL(string: jsonUrlString) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            if error != nil {
-                print("error is \(String(describing: error))")
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-            let repositryList = try JSONDecoder().decode([RepositoryResponse].self, from: data)
-            
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.numberOfRepositoriesLabel.text = String(repositryList.count)
+            URLSession.shared.dataTask(with: url, completionHandler: {[unowned self] data, response, error in
+                if let error = error { print(error); return }
+                do {
+                    self.repositryList = try JSONDecoder().decode([RepositoryResponse].self, from: data!)
+                    print(self.repositryList)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        self.numberOfRepositoriesLabel.text = String(self.repositryList.count)
+                    }
+                } catch {
+                    print(error)
                 }
-                print(repositryList.count)
-            } catch let jsonError {
-                
-                print("Error serializing json:", jsonError)
-            }
-        }
-        task.resume()
+            }).resume()
     }
 
     // MARK: - Table view data source

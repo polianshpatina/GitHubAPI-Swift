@@ -3,4 +3,70 @@
    uuid = "8B27CE31-26DD-4742-9C27-9CC2BF2600E1"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E2229E6-5B0A-4FBA-9066-D27B53BAF058"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubAPI-Swift/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "loadRepos()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E2229E6-5B0A-4FBA-9066-D27B53BAF058 - 7a3d6851f4dcad2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GitHubAPI_Swift.RepositoriesViewController.(loadRepos in _9EEC9B47FF5AFDBD69C014422CAAB6CE)() -&gt; ()"
+                  moduleName = "GitHubAPI-Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/skaylor/Desktop/GitHubAPI-Swift/GitHubAPI-Swift/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1416">
+               </Location>
+               <Location
+                  uuid = "4E2229E6-5B0A-4FBA-9066-D27B53BAF058 - 63d07a695a702ae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GitHubAPI_Swift.RepositoriesViewController.(loadRepos in _9EEC9B47FF5AFDBD69C014422CAAB6CE)() -&gt; ()"
+                  moduleName = "GitHubAPI-Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/skaylor/Desktop/GitHubAPI-Swift/GitHubAPI-Swift/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04035885-0B42-45E1-B1A0-809D1C8C05AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubAPI-Swift/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
