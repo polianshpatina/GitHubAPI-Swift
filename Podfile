@@ -5,6 +5,6 @@ target 'GitHubAPI-Swift' do
   #use_frameworks!
 
   # Pods for GitHubAPI-Swift
-  pod 'GithubAPI' 
+  pod 'GithubAPI'
 
 end

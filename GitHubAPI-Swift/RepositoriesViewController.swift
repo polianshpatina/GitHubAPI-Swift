@@ -14,31 +14,67 @@ class RepositoriesViewController: UITableViewController {
     @IBOutlet weak var numberOfRepositoriesLabel: UILabel!
     
     var username = String()
+    let repositryList: [RepositoryResponse] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loadRepos()
+        numberOfRepositoriesLabel.text = String(repositryList.count)
+    }
+    
+    private func loadRepos() {
+        
+        let jsonUrlString = "https://api.github.com/users/polianshpatina/repos"
+        
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if error != nil {
+                print("error is \(String(describing: error))")
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+            let repositryList = try JSONDecoder().decode([RepositoryResponse].self, from: data)
+            
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.numberOfRepositoriesLabel.text = String(repositryList.count)
+                }
+                print(repositryList.count)
+            } catch let jsonError {
+                
+                print("Error serializing json:", jsonError)
+            }
+        }
+        task.resume()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return repositryList.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepCell", for: indexPath) as! RepositoriesViewCell
 
-        // Configure the cell...
-
+        let cellData = repositryList[indexPath.row]
+        
+        cell.nameLabel.text = cellData.name
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

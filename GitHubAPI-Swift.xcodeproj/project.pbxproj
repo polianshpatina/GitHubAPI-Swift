@@ -11,6 +11,15 @@
 		B7063A08254EA62100CC1716 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A07254EA62100CC1716 /* LoginViewController.swift */; };
 		B7063A0C254F259600CC1716 /* RepositoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A0B254F259600CC1716 /* RepositoriesViewCell.swift */; };
 		B7063A10254F27A600CC1716 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A0F254F27A600CC1716 /* RepositoriesViewController.swift */; };
+		B7063A17254F59E200CC1716 /* CommitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A16254F59E200CC1716 /* CommitsResponse.swift */; };
+		B7063A19254F609F00CC1716 /* RepositryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A18254F609F00CC1716 /* RepositryOwner.swift */; };
+		B7063A1B254F61CF00CC1716 /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A1A254F61CF00CC1716 /* RepositoryResponse.swift */; };
+		B7063A1D254F870700CC1716 /* RepositoryPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A1C254F870700CC1716 /* RepositoryPermission.swift */; };
+		B7063A1F254F8A1600CC1716 /* RepositoryLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A1E254F8A1600CC1716 /* RepositoryLicense.swift */; };
+		B7063A25254FAED000CC1716 /* CommitAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A24254FAED000CC1716 /* CommitAuthor.swift */; };
+		B7063A27254FAF3800CC1716 /* CommitCommiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A26254FAF3800CC1716 /* CommitCommiter.swift */; };
+		B7063A29254FAFFB00CC1716 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A28254FAFFB00CC1716 /* Commit.swift */; };
+		B7063A2B254FB4F400CC1716 /* CommitParents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063A2A254FB4F400CC1716 /* CommitParents.swift */; };
 		B734B110254E84FB0000AA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734B10F254E84FB0000AA1B /* AppDelegate.swift */; };
 		B734B112254E84FB0000AA1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734B111254E84FB0000AA1B /* SceneDelegate.swift */; };
 		B734B119254E850E0000AA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B734B118254E850E0000AA1B /* Assets.xcassets */; };
@@ -28,6 +37,15 @@
 		B7063A07254EA62100CC1716 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B7063A0B254F259600CC1716 /* RepositoriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewCell.swift; sourceTree = "<group>"; };
 		B7063A0F254F27A600CC1716 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		B7063A16254F59E200CC1716 /* CommitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsResponse.swift; sourceTree = "<group>"; };
+		B7063A18254F609F00CC1716 /* RepositryOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositryOwner.swift; sourceTree = "<group>"; };
+		B7063A1A254F61CF00CC1716 /* RepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
+		B7063A1C254F870700CC1716 /* RepositoryPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPermission.swift; sourceTree = "<group>"; };
+		B7063A1E254F8A1600CC1716 /* RepositoryLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLicense.swift; sourceTree = "<group>"; };
+		B7063A24254FAED000CC1716 /* CommitAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitAuthor.swift; sourceTree = "<group>"; };
+		B7063A26254FAF3800CC1716 /* CommitCommiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCommiter.swift; sourceTree = "<group>"; };
+		B7063A28254FAFFB00CC1716 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		B7063A2A254FB4F400CC1716 /* CommitParents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitParents.swift; sourceTree = "<group>"; };
 		B734B10C254E84FB0000AA1B /* GitHubAPI-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHubAPI-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B734B10F254E84FB0000AA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B734B111254E84FB0000AA1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +79,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B7063A15254F59A500CC1716 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7063A23254FAD3F00CC1716 /* Repository */,
+				B7063A22254FAD2E00CC1716 /* Commit */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7063A22254FAD2E00CC1716 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				B7063A16254F59E200CC1716 /* CommitsResponse.swift */,
+				B7063A24254FAED000CC1716 /* CommitAuthor.swift */,
+				B7063A26254FAF3800CC1716 /* CommitCommiter.swift */,
+				B7063A28254FAFFB00CC1716 /* Commit.swift */,
+				B7063A2A254FB4F400CC1716 /* CommitParents.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		B7063A23254FAD3F00CC1716 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B7063A1A254F61CF00CC1716 /* RepositoryResponse.swift */,
+				B7063A1C254F870700CC1716 /* RepositoryPermission.swift */,
+				B7063A18254F609F00CC1716 /* RepositryOwner.swift */,
+				B7063A1E254F8A1600CC1716 /* RepositoryLicense.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		B734B103254E84FA0000AA1B = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +132,7 @@
 		B734B10E254E84FB0000AA1B /* GitHubAPI-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				B7063A15254F59A500CC1716 /* Model */,
 				B734B10F254E84FB0000AA1B /* AppDelegate.swift */,
 				B734B111254E84FB0000AA1B /* SceneDelegate.swift */,
 				B7063A07254EA62100CC1716 /* LoginViewController.swift */,
@@ -204,13 +255,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7063A29254FAFFB00CC1716 /* Commit.swift in Sources */,
 				B7063A0C254F259600CC1716 /* RepositoriesViewCell.swift in Sources */,
 				B734B128254E88B70000AA1B /* CommitsViewCell.swift in Sources */,
 				B734B126254E88430000AA1B /* CommitsViewController.swift in Sources */,
+				B7063A2B254FB4F400CC1716 /* CommitParents.swift in Sources */,
 				B734B110254E84FB0000AA1B /* AppDelegate.swift in Sources */,
+				B7063A27254FAF3800CC1716 /* CommitCommiter.swift in Sources */,
+				B7063A1F254F8A1600CC1716 /* RepositoryLicense.swift in Sources */,
+				B7063A1B254F61CF00CC1716 /* RepositoryResponse.swift in Sources */,
+				B7063A1D254F870700CC1716 /* RepositoryPermission.swift in Sources */,
 				B7063A08254EA62100CC1716 /* LoginViewController.swift in Sources */,
+				B7063A17254F59E200CC1716 /* CommitsResponse.swift in Sources */,
 				B7063A10254F27A600CC1716 /* RepositoriesViewController.swift in Sources */,
 				B734B112254E84FB0000AA1B /* SceneDelegate.swift in Sources */,
+				B7063A19254F609F00CC1716 /* RepositryOwner.swift in Sources */,
+				B7063A25254FAED000CC1716 /* CommitAuthor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
