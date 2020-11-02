@@ -95,6 +95,7 @@
                     </tableView>
                     <connections>
                         <outlet property="numberOfRepositoriesLabel" destination="yIJ-TO-Yy3" id="aSg-Z4-KK8"/>
+                        <segue destination="En4-ke-F5z" kind="show" identifier="reposToCommits" id="xiD-qJ-8H4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huT-j7-FIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,7 +107,7 @@
             <objects>
                 <tableViewController id="En4-ke-F5z" customClass="CommitsViewController" customModule="GitHubAPI_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gSN-4Y-Kbw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Yia-Fy-xz4">
@@ -225,6 +226,7 @@
                             <outlet property="delegate" destination="En4-ke-F5z" id="FSA-IN-WWl"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="eSm-kW-hj0"/>
                     <connections>
                         <outlet property="numberOfCommitsLabel" destination="7A7-Rz-Kjj" id="Pgy-wE-ClD"/>
                     </connections>
