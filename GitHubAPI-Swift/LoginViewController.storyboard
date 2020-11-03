@@ -16,28 +16,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GitHub Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibp-al-rvv">
-                                <rect key="frame" x="20" y="340" width="301" height="34"/>
+                                <rect key="frame" x="30" y="253" width="354" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="gRA-nU-y1B"/>
+                                    <constraint firstAttribute="height" constant="40" id="06I-zg-fR6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY1-39-rQw">
-                                <rect key="frame" x="107" y="268" width="200" height="42"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GitHub Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-Ge-bXw">
+                                <rect key="frame" x="30" y="313" width="354" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="k07-Hu-2vW"/>
+                                    <constraint firstAttribute="height" constant="40" id="7rf-gq-e8a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY1-39-rQw">
+                                <rect key="frame" x="117.5" y="188" width="179" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mju-d3-PPG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQ0-Hg-eYh">
-                                <rect key="frame" x="329" y="340" width="65" height="34"/>
+                                <rect key="frame" x="167" y="373" width="80" height="35"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Y1D-69-hhJ"/>
-                                    <constraint firstAttribute="width" constant="65" id="rT0-oc-K1r"/>
+                                    <constraint firstAttribute="width" constant="80" id="Xl5-uz-jUB"/>
+                                    <constraint firstAttribute="height" constant="35" id="vv8-g3-0NP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -52,18 +60,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nY1-39-rQw" firstAttribute="top" secondItem="sPM-Oy-7Dc" secondAttribute="top" constant="180" id="0hk-KT-EAM"/>
-                            <constraint firstItem="dQ0-Hg-eYh" firstAttribute="leading" secondItem="Ibp-al-rvv" secondAttribute="trailing" constant="8" id="1Pp-dp-9OG"/>
-                            <constraint firstItem="dQ0-Hg-eYh" firstAttribute="top" secondItem="nY1-39-rQw" secondAttribute="bottom" constant="30" id="2B4-9n-qVQ"/>
-                            <constraint firstItem="nY1-39-rQw" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="3Po-Ig-n4x"/>
-                            <constraint firstItem="Ibp-al-rvv" firstAttribute="top" secondItem="nY1-39-rQw" secondAttribute="bottom" constant="30" id="41D-aI-ThH"/>
-                            <constraint firstItem="sPM-Oy-7Dc" firstAttribute="trailing" secondItem="dQ0-Hg-eYh" secondAttribute="trailing" constant="20" id="9Xo-M6-Iw5"/>
-                            <constraint firstItem="Ibp-al-rvv" firstAttribute="leading" secondItem="sPM-Oy-7Dc" secondAttribute="leading" constant="20" id="Gn9-oq-lyf"/>
+                            <constraint firstItem="Ibp-al-rvv" firstAttribute="leading" secondItem="sPM-Oy-7Dc" secondAttribute="leading" constant="30" id="1Tv-EE-TTg"/>
+                            <constraint firstItem="sPM-Oy-7Dc" firstAttribute="trailing" secondItem="8SP-Ge-bXw" secondAttribute="trailing" constant="30" id="ACl-Bj-toC"/>
+                            <constraint firstItem="nY1-39-rQw" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="Jf1-w3-nhk"/>
+                            <constraint firstItem="8SP-Ge-bXw" firstAttribute="leading" secondItem="sPM-Oy-7Dc" secondAttribute="leading" constant="30" id="Nva-IQ-b0m"/>
+                            <constraint firstItem="nY1-39-rQw" firstAttribute="top" secondItem="sPM-Oy-7Dc" secondAttribute="top" constant="100" id="c7D-xN-qFb"/>
+                            <constraint firstItem="sPM-Oy-7Dc" firstAttribute="trailing" secondItem="Ibp-al-rvv" secondAttribute="trailing" constant="30" id="dXk-4y-C6o"/>
+                            <constraint firstItem="Ibp-al-rvv" firstAttribute="top" secondItem="nY1-39-rQw" secondAttribute="bottom" constant="25" id="dfp-jh-2uQ"/>
+                            <constraint firstItem="8SP-Ge-bXw" firstAttribute="top" secondItem="Ibp-al-rvv" secondAttribute="bottom" constant="20" id="eIY-v2-yNd"/>
+                            <constraint firstItem="Ibp-al-rvv" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="lin-WM-m8F"/>
+                            <constraint firstItem="dQ0-Hg-eYh" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="nM6-LQ-yYZ"/>
+                            <constraint firstItem="dQ0-Hg-eYh" firstAttribute="top" secondItem="8SP-Ge-bXw" secondAttribute="bottom" constant="20" id="tXD-S4-yE1"/>
+                            <constraint firstItem="8SP-Ge-bXw" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="zaZ-TL-uH4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sPM-Oy-7Dc"/>
                     </view>
                     <navigationItem key="navigationItem" id="Shd-25-xbi"/>
                     <connections>
+                        <outlet property="passwordTextfield" destination="8SP-Ge-bXw" id="b9c-Df-ClL"/>
                         <outlet property="usernameTextfield" destination="Ibp-al-rvv" id="C5A-m4-4lr"/>
                         <segue destination="2b4-9c-q8P" kind="show" identifier="LoginToRepositories" id="j8s-0O-Xb1"/>
                     </connections>

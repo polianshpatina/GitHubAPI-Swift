@@ -24,8 +24,8 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-TO-Yy3">
-                                    <rect key="frame" x="332.5" y="5" width="50" height="60"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-TO-Yy3">
+                                    <rect key="frame" x="327.5" y="5" width="50" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="t76-kZ-0Ia"/>
                                     </constraints>
@@ -36,7 +36,7 @@
                             </subviews>
                             <color key="backgroundColor" red="0.29380148611573426" green="0.87015832139520088" blue="0.90132613279844565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="yIJ-TO-Yy3" firstAttribute="leading" secondItem="l13-Mx-Msq" secondAttribute="trailing" constant="7" id="5Df-gH-WJf"/>
+                                <constraint firstItem="yIJ-TO-Yy3" firstAttribute="leading" secondItem="l13-Mx-Msq" secondAttribute="trailing" constant="2" id="5Df-gH-WJf"/>
                                 <constraint firstItem="l13-Mx-Msq" firstAttribute="top" secondItem="yIJ-TO-Yy3" secondAttribute="top" id="WSa-SO-Cql"/>
                                 <constraint firstItem="l13-Mx-Msq" firstAttribute="bottom" secondItem="yIJ-TO-Yy3" secondAttribute="bottom" id="c8k-9T-U2B"/>
                                 <constraint firstItem="l13-Mx-Msq" firstAttribute="leading" secondItem="w7s-ze-cKf" secondAttribute="leadingMargin" id="lS2-R5-9oy"/>

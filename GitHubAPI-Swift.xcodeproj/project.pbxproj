@@ -27,6 +27,7 @@
 		B734B124254E87220000AA1B /* CommitsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B734B123254E87220000AA1B /* CommitsViewController.storyboard */; };
 		B734B126254E88430000AA1B /* CommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734B125254E88430000AA1B /* CommitsViewController.swift */; };
 		B734B128254E88B70000AA1B /* CommitsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734B127254E88B70000AA1B /* CommitsViewCell.swift */; };
+		B79BE2472551102400D09FDA /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79BE2462551102400D09FDA /* Alerts.swift */; };
 		FB3645DF7AD2CA2DD8ACED32 /* libPods-GitHubAPI-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77C47E7D266DCEBA1AA456 /* libPods-GitHubAPI-Swift.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		B734B123254E87220000AA1B /* CommitsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommitsViewController.storyboard; sourceTree = "<group>"; };
 		B734B125254E88430000AA1B /* CommitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewController.swift; sourceTree = "<group>"; };
 		B734B127254E88B70000AA1B /* CommitsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewCell.swift; sourceTree = "<group>"; };
+		B79BE2462551102400D09FDA /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		DF1F87035E01206D5F517A74 /* Pods-GitHubAPI-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPI-Swift.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPI-Swift/Pods-GitHubAPI-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 		B734B10E254E84FB0000AA1B /* GitHubAPI-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				B79BE24525510FDB00D09FDA /* Utilities */,
 				B7063A15254F59A500CC1716 /* Model */,
 				B734B10F254E84FB0000AA1B /* AppDelegate.swift */,
 				B734B111254E84FB0000AA1B /* SceneDelegate.swift */,
@@ -147,6 +150,14 @@
 				B734B11D254E850E0000AA1B /* Info.plist */,
 			);
 			path = "GitHubAPI-Swift";
+			sourceTree = "<group>";
+		};
+		B79BE24525510FDB00D09FDA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B79BE2462551102400D09FDA /* Alerts.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F8BBB50076C9EBC42DF31A39 /* Frameworks */ = {
@@ -265,6 +276,7 @@
 				B7063A1F254F8A1600CC1716 /* RepositoryLicense.swift in Sources */,
 				B7063A1B254F61CF00CC1716 /* RepositoryResponse.swift in Sources */,
 				B7063A1D254F870700CC1716 /* RepositoryPermission.swift in Sources */,
+				B79BE2472551102400D09FDA /* Alerts.swift in Sources */,
 				B7063A08254EA62100CC1716 /* LoginViewController.swift in Sources */,
 				B7063A17254F59E200CC1716 /* CommitsResponse.swift in Sources */,
 				B7063A10254F27A600CC1716 /* RepositoriesViewController.swift in Sources */,

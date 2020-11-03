@@ -12,6 +12,7 @@ import GithubAPI
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,52 +20,58 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
         usernameTextfield.text = ""
+        passwordTextfield.text = ""
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        if usernameTextfield.text != "" {
-            let authentication = BasicAuthentication(username: usernameTextfield.text!, password: "Samsunggalaxyj7!")
-            UserAPI(authentication: authentication).getUser { (response, error) in
-                if let response = response {
-                    if response.id != nil {
-                        DispatchQueue.main.async{
-                            self.performSegue(withIdentifier: "LoginToRepositories", sender: self)
-                           }
+        
+        if (textFieldrequired()) {
+            let authentication = BasicAuthentication(username: usernameTextfield.text!, password: passwordTextfield.text!)
+                UserAPI(authentication: authentication).getUser { (response, error) in
+                    if let response = response {
+                        if response.id != nil {
+                            DispatchQueue.main.async{
+                                self.performSegue(withIdentifier: "LoginToRepositories", sender: self)
+                            }
+                        }
+                        else {
+                            DispatchQueue.main.async{
+                                Alerts.ShowAlert("Username or Password is incorrect!", parentVC: self)
+                            }
+                        }
+                    } else {
+                        Alerts.ShowAlert(error!.localizedDescription, parentVC: self)
                     }
-                    else {
-                        DispatchQueue.main.async{
-                         // create the alert
-                         let alert = UIAlertController(title: "Alert", message: "Username or Password is incorrect!", preferredStyle: UIAlertController.Style.alert)
-                         
-                         // add an action (button)
-                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                         
-                         // show the alert
-                         self.present(alert, animated: true, completion: nil)
-                        }                        
-                    }
-                } else {
-                    // create the alert
-                    let alert = UIAlertController(title: "Alert", message: error.debugDescription, preferredStyle: UIAlertController.Style.alert)
-                    
-                    // add an action (button)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    
-                    // show the alert
-                    self.present(alert, animated: true, completion: nil)
-                }
             }
         }
-        else {
-            // create the alert
-            let alert = UIAlertController(title: "Alert", message: "Username can not be empty!", preferredStyle: UIAlertController.Style.alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
+    }
+    
+    func textFieldrequired() -> Bool{
+        
+        var errorMsg : String = ""
+        
+        if (self.usernameTextfield.text?.isEmpty)! && (self.passwordTextfield.text?.isEmpty)! {
+            errorMsg += "Username and Password can not be empty!"
+            Alerts.ShowAlert(errorMsg, parentVC: self)
+            return false
         }
+            
+        else if (self.usernameTextfield.text?.isEmpty)! {
+            errorMsg += "Username can not be empty!"
+            Alerts.ShowAlert(errorMsg, parentVC: self)
+            return false
+        }
+            
+        else if (self.passwordTextfield.text?.isEmpty)! {
+            errorMsg += "Password can not be empty!"
+            Alerts.ShowAlert(errorMsg, parentVC: self)
+            return false
+        }
+        else {
+            return true
+        }
+        
+        return false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
