@@ -47,7 +47,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="oES-9w-DSI" eventType="touchUpInside" id="tfh-aw-zeM"/>
-                                    <segue destination="2b4-9c-q8P" kind="show" identifier="LoginToRepositories" id="DaE-Ja-Lsp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,6 +65,7 @@
                     <navigationItem key="navigationItem" id="Shd-25-xbi"/>
                     <connections>
                         <outlet property="usernameTextfield" destination="Ibp-al-rvv" id="C5A-m4-4lr"/>
+                        <segue destination="2b4-9c-q8P" kind="show" identifier="LoginToRepositories" id="j8s-0O-Xb1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPd-92-Ykh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
