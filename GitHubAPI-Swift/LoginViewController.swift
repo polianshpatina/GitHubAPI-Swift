@@ -70,8 +70,6 @@ class LoginViewController: UIViewController {
         else {
             return true
         }
-        
-        return false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
