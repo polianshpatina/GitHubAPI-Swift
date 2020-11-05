@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="height" constant="35" id="vv8-g3-0NP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <color key="titleShadowColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,13 +57,39 @@
                                     <action selector="loginPressed:" destination="oES-9w-DSI" eventType="touchUpInside" id="tfh-aw-zeM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-gC-d7Q">
+                                <rect key="frame" x="87" y="468" width="240" height="35"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8ZT-Up-w5M"/>
+                                    <constraint firstAttribute="height" constant="35" id="JYW-Og-qNs"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Show commits of this assignment"/>
+                                <connections>
+                                    <action selector="showAssigmentCommitsButton:" destination="oES-9w-DSI" eventType="touchUpInside" id="MQ7-Yy-y7D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-He-28x">
+                                <rect key="frame" x="194.5" y="428" width="25" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="nPx-KY-T9Z"/>
+                                    <constraint firstAttribute="height" constant="20" id="s6l-sE-Skd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ibp-al-rvv" firstAttribute="leading" secondItem="sPM-Oy-7Dc" secondAttribute="leading" constant="30" id="1Tv-EE-TTg"/>
+                            <constraint firstItem="Fuu-He-28x" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="5CC-Rr-MG6"/>
                             <constraint firstItem="sPM-Oy-7Dc" firstAttribute="trailing" secondItem="8SP-Ge-bXw" secondAttribute="trailing" constant="30" id="ACl-Bj-toC"/>
                             <constraint firstItem="nY1-39-rQw" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="Jf1-w3-nhk"/>
                             <constraint firstItem="8SP-Ge-bXw" firstAttribute="leading" secondItem="sPM-Oy-7Dc" secondAttribute="leading" constant="30" id="Nva-IQ-b0m"/>
+                            <constraint firstItem="Fuu-He-28x" firstAttribute="top" secondItem="dQ0-Hg-eYh" secondAttribute="bottom" constant="20" id="TIr-Ug-NTd"/>
+                            <constraint firstItem="MvS-gC-d7Q" firstAttribute="top" secondItem="Fuu-He-28x" secondAttribute="bottom" constant="20" id="TVa-eR-2DJ"/>
                             <constraint firstItem="nY1-39-rQw" firstAttribute="top" secondItem="sPM-Oy-7Dc" secondAttribute="top" constant="100" id="c7D-xN-qFb"/>
                             <constraint firstItem="sPM-Oy-7Dc" firstAttribute="trailing" secondItem="Ibp-al-rvv" secondAttribute="trailing" constant="30" id="dXk-4y-C6o"/>
                             <constraint firstItem="Ibp-al-rvv" firstAttribute="top" secondItem="nY1-39-rQw" secondAttribute="bottom" constant="25" id="dfp-jh-2uQ"/>
@@ -71,6 +97,7 @@
                             <constraint firstItem="Ibp-al-rvv" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="lin-WM-m8F"/>
                             <constraint firstItem="dQ0-Hg-eYh" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="nM6-LQ-yYZ"/>
                             <constraint firstItem="dQ0-Hg-eYh" firstAttribute="top" secondItem="8SP-Ge-bXw" secondAttribute="bottom" constant="20" id="tXD-S4-yE1"/>
+                            <constraint firstItem="MvS-gC-d7Q" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="ygD-Ju-P2v"/>
                             <constraint firstItem="8SP-Ge-bXw" firstAttribute="centerX" secondItem="lIW-Ap-cbm" secondAttribute="centerX" id="zaZ-TL-uH4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sPM-Oy-7Dc"/>
@@ -80,21 +107,32 @@
                         <outlet property="passwordTextfield" destination="8SP-Ge-bXw" id="b9c-Df-ClL"/>
                         <outlet property="usernameTextfield" destination="Ibp-al-rvv" id="C5A-m4-4lr"/>
                         <segue destination="2b4-9c-q8P" kind="show" identifier="LoginToRepositories" id="j8s-0O-Xb1"/>
+                        <segue destination="EAV-Mt-0nx" kind="show" identifier="LoginToCommits" id="nfA-Dg-BV3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPd-92-Ykh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1034.7826086956522" y="89.732142857142847"/>
         </scene>
-        <!--CommitsViewController-->
+        <!--RepositoriesViewController-->
         <scene sceneID="joe-Da-DK3">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="RepositoriesViewController" storyboardName="CommitsViewController" id="2b4-9c-q8P" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="RepositoriesViewController" storyboardName="RepositoriesViewController" id="2b4-9c-q8P" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="LxI-rs-kUl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQO-oU-spo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1692.753623188406" y="30.803571428571427"/>
+        </scene>
+        <!--CommitsViewController-->
+        <scene sceneID="fHO-Us-xYu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CommitsViewController" storyboardName="CommitsViewController" id="EAV-Mt-0nx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h9F-xF-qBl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sf6-OH-EAk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5TX-K4-3Oq">

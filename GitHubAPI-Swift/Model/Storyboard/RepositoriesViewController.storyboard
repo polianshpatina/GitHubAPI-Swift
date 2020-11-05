@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b7w-cp-iPK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repositories View Controller-->
+        <scene sceneID="U3Z-0y-Ozc">
+            <objects>
+                <tableViewController storyboardIdentifier="RepositoriesViewController" id="b7w-cp-iPK" customClass="RepositoriesViewController" customModule="GitHubAPI_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3yV-bd-sdp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="uj6-fM-t5g">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Repositories: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-AZ-oH1">
+                                    <rect key="frame" x="8" y="5" width="317.5" height="60"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl3-RT-eYP">
+                                    <rect key="frame" x="327.5" y="5" width="50" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="WLr-qd-c9r"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.29380148610000001" green="0.87015832140000005" blue="0.90132613279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="IoU-AZ-oH1" firstAttribute="top" secondItem="Zl3-RT-eYP" secondAttribute="top" id="CDs-Fe-70h"/>
+                                <constraint firstItem="IoU-AZ-oH1" firstAttribute="bottom" secondItem="Zl3-RT-eYP" secondAttribute="bottom" id="F9C-LB-h2B"/>
+                                <constraint firstItem="IoU-AZ-oH1" firstAttribute="centerY" secondItem="uj6-fM-t5g" secondAttribute="centerY" id="FOJ-AM-1Ue"/>
+                                <constraint firstItem="IoU-AZ-oH1" firstAttribute="leading" secondItem="uj6-fM-t5g" secondAttribute="leadingMargin" id="Q4a-zV-lcz"/>
+                                <constraint firstItem="IoU-AZ-oH1" firstAttribute="top" secondItem="uj6-fM-t5g" secondAttribute="top" constant="5" id="etT-e5-7w8"/>
+                                <constraint firstItem="Zl3-RT-eYP" firstAttribute="leading" secondItem="IoU-AZ-oH1" secondAttribute="trailing" constant="2" id="g48-GU-LE3"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepCell" rowHeight="60" id="Dyz-b0-01x" customClass="RepositoriesViewCell" customModule="GitHubAPI_Swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="98" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dyz-b0-01x" id="dgz-Rg-8zO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d82-F6-pEb">
+                                            <rect key="frame" x="30" y="21" width="354" height="18"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-dL-CGW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="jCk-7A-4Lt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X21-Vl-q81">
+                                                    <rect key="frame" x="65" y="0.0" width="289" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f6b-dL-CGW" firstAttribute="leading" secondItem="d82-F6-pEb" secondAttribute="leading" id="KYd-Le-gaC"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="d82-F6-pEb" secondAttribute="bottom" constant="10" id="Qeh-fX-fwe"/>
+                                        <constraint firstItem="d82-F6-pEb" firstAttribute="leading" secondItem="dgz-Rg-8zO" secondAttribute="leadingMargin" constant="10" id="hF0-5J-9FQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="d82-F6-pEb" secondAttribute="trailing" constant="10" id="wlV-sg-Rwm"/>
+                                        <constraint firstItem="d82-F6-pEb" firstAttribute="top" secondItem="dgz-Rg-8zO" secondAttribute="topMargin" constant="10" id="wq7-GS-EBs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="X21-Vl-q81" id="a7b-mG-m6v"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b7w-cp-iPK" id="Xtq-oX-g51"/>
+                            <outlet property="delegate" destination="b7w-cp-iPK" id="wda-aj-oPf"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="numberOfRepositoriesLabel" destination="Zl3-RT-eYP" id="gju-OJ-F1o"/>
+                        <segue destination="tA5-Tx-bHi" kind="show" identifier="reposToCommits" id="HDi-ix-Icj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBT-PM-yyV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="117"/>
+        </scene>
+        <!--CommitsViewController-->
+        <scene sceneID="atT-3i-mIT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CommitsViewController" storyboardName="CommitsViewController" id="tA5-Tx-bHi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h6y-6J-qwb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7t-TZ-A7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="117"/>
+        </scene>
+    </scenes>
+</document>

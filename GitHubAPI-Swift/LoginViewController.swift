@@ -72,11 +72,23 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func showAssigmentCommitsButton(_ sender: UIButton) {
+        DispatchQueue.main.async{
+        self.performSegue(withIdentifier: "LoginToCommits", sender: self)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LoginToRepositories"
         {
             let vc = segue.destination as! RepositoriesViewController
             vc.username = usernameTextfield.text!
+        }
+        else if segue.identifier == "LoginToCommits"
+        {
+            let vc = segue.destination as! CommitsViewController
+            vc.username = "polianshpatina"
+            vc.repositoryName = "GitHubAPI-Swift"
         }
     }
 }

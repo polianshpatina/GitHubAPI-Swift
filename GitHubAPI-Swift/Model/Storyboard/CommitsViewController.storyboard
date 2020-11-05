@@ -1,113 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sor-qD-bpN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="En4-ke-F5z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Repositories View Controller-->
-        <scene sceneID="IsA-sr-JXa">
-            <objects>
-                <tableViewController storyboardIdentifier="RepositoriesViewController" id="sor-qD-bpN" customClass="RepositoriesViewController" customModule="GitHubAPI_Swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iA1-nR-ns6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="w7s-ze-cKf">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Repositories: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l13-Mx-Msq">
-                                    <rect key="frame" x="8" y="5" width="317.5" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-TO-Yy3">
-                                    <rect key="frame" x="327.5" y="5" width="50" height="60"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="t76-kZ-0Ia"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="0.29380148611573426" green="0.87015832139520088" blue="0.90132613279844565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstItem="yIJ-TO-Yy3" firstAttribute="leading" secondItem="l13-Mx-Msq" secondAttribute="trailing" constant="2" id="5Df-gH-WJf"/>
-                                <constraint firstItem="l13-Mx-Msq" firstAttribute="top" secondItem="yIJ-TO-Yy3" secondAttribute="top" id="WSa-SO-Cql"/>
-                                <constraint firstItem="l13-Mx-Msq" firstAttribute="bottom" secondItem="yIJ-TO-Yy3" secondAttribute="bottom" id="c8k-9T-U2B"/>
-                                <constraint firstItem="l13-Mx-Msq" firstAttribute="leading" secondItem="w7s-ze-cKf" secondAttribute="leadingMargin" id="lS2-R5-9oy"/>
-                                <constraint firstItem="l13-Mx-Msq" firstAttribute="top" secondItem="w7s-ze-cKf" secondAttribute="top" constant="5" id="nb4-zk-4NH"/>
-                                <constraint firstItem="l13-Mx-Msq" firstAttribute="centerY" secondItem="w7s-ze-cKf" secondAttribute="centerY" id="zSD-n1-rVq"/>
-                            </constraints>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepCell" rowHeight="60" id="ORz-gc-N0C" customClass="RepositoriesViewCell" customModule="GitHubAPI_Swift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="98" width="414" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ORz-gc-N0C" id="1Qn-Zh-Il0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4p-Al-1T2">
-                                            <rect key="frame" x="30" y="21" width="354" height="18"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbz-tN-75R">
-                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="65" id="2QZ-4B-jPA"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8L-c5-AVv">
-                                                    <rect key="frame" x="65" y="0.0" width="289" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Fbz-tN-75R" firstAttribute="leading" secondItem="n4p-Al-1T2" secondAttribute="leading" id="tqu-H2-l5v"/>
-                                            </constraints>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="n4p-Al-1T2" firstAttribute="leading" secondItem="1Qn-Zh-Il0" secondAttribute="leadingMargin" constant="10" id="02A-KR-sx1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="n4p-Al-1T2" secondAttribute="trailing" constant="10" id="1ly-hO-NZo"/>
-                                        <constraint firstItem="n4p-Al-1T2" firstAttribute="top" secondItem="1Qn-Zh-Il0" secondAttribute="topMargin" constant="10" id="eLZ-bt-Twg"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="n4p-Al-1T2" secondAttribute="bottom" constant="10" id="oI4-eq-hc1"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nameLabel" destination="B8L-c5-AVv" id="HLT-1C-d0D"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="sor-qD-bpN" id="fI5-3O-jtP"/>
-                            <outlet property="delegate" destination="sor-qD-bpN" id="vGv-IN-fuD"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="numberOfRepositoriesLabel" destination="yIJ-TO-Yy3" id="aSg-Z4-KK8"/>
-                        <segue destination="En4-ke-F5z" kind="show" identifier="reposToCommits" id="xiD-qJ-8H4"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="huT-j7-FIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-404" y="117"/>
-        </scene>
         <!--Commits View Controller-->
         <scene sceneID="z8u-FN-sR7">
             <objects>
-                <tableViewController id="En4-ke-F5z" customClass="CommitsViewController" customModule="GitHubAPI_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommitsViewController" id="En4-ke-F5z" customClass="CommitsViewController" customModule="GitHubAPI_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gSN-4Y-Kbw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Yia-Fy-xz4">
