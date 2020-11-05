@@ -36,7 +36,7 @@
 		266B183C67726727001B9C2D /* Pods-GitHubAPI-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPI-Swift.release.xcconfig"; path = "Target Support Files/Pods-GitHubAPI-Swift/Pods-GitHubAPI-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		2D77C47E7D266DCEBA1AA456 /* libPods-GitHubAPI-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubAPI-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7063A05254EA5A400CC1716 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
-		B7063A07254EA62100CC1716 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		B7063A07254EA62100CC1716 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../Model/LoginViewController.swift; sourceTree = "<group>"; };
 		B7063A0B254F259600CC1716 /* RepositoriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewCell.swift; sourceTree = "<group>"; };
 		B7063A0F254F27A600CC1716 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		B7063A16254F59E200CC1716 /* CommitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsResponse.swift; sourceTree = "<group>"; };
