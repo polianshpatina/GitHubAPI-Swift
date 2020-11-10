@@ -126,7 +126,7 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		B7310065255397B100093B4A /* Controllers */ = {
+		B7310065255397B100093B4A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				B7063A0F254F27A600CC1716 /* RepositoriesViewController.swift */,
@@ -135,7 +135,7 @@
 				B734B127254E88B70000AA1B /* CommitsViewCell.swift */,
 				B7063A07254EA62100CC1716 /* LoginViewController.swift */,
 			);
-			name = Controllers;
+			name = Controller;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				B79BE24525510FDB00D09FDA /* Utilities */,
-				B7310065255397B100093B4A /* Controllers */,
+				B7310065255397B100093B4A /* Controller */,
 				B731006425537A3200093B4A /* Storyboard */,
 				B7063A15254F59A500CC1716 /* Model */,
 				B734B10F254E84FB0000AA1B /* AppDelegate.swift */,
