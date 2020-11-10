@@ -32,7 +32,6 @@ class CommitsViewController: UITableViewController {
                 if let error = error { print(error); return }
                 do {
                     self.commitsList = try JSONDecoder().decode([CommitsResponse].self, from: data!)
-                    print(self.commitsList)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                         self.numberOfCommitsLabel.text = String(self.commitsList.count)

@@ -33,7 +33,6 @@ class RepositoriesViewController: UITableViewController {
                 if let error = error { print(error); return }
                 do {
                     self.repositryList = try JSONDecoder().decode([RepositoryResponse].self, from: data!)
-                    print(self.repositryList)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                         self.numberOfRepositoriesLabel.text = String(self.repositryList.count)
